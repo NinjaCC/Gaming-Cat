@@ -70,9 +70,8 @@ while running:
     if top_score < score:
         top_score = score
 
-    f = pygame.font.SysFont(pygame.font.get_default_font(), 30)  # name, size
-    text = f.render('top scrore ' + str(top_score) + ' score ' + str(score), False, circle_color)
-    screen.blit(text, (20, 20))
+    display_text(message='top score ' + str(top_score), x=20, y=20)
+    display_text(message='score ' + str(score), x=20, y=60)
 
     pygame.draw.rect(screen, circle_color, pygame.Rect(rect_left, rect_top, RECT_WIDTH, 10))
 
